@@ -56,6 +56,101 @@ nav ul li a:hover {
     }
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.chef {
+    width: calc(33.33% - 20px);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.chef img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chef h2 {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.chef p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .chef {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .chef {
+        width: calc(100% - 20px);
+    }
+}
+
+.sobre-equipe {
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.sobre-equipe h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.sobre-equipe p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .sobre-equipe {
+        padding: 15px;
+    }
+
+    .sobre-equipe h2 {
+        font-size: 22px;
+    }
+
+    .sobre-equipe p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .sobre-equipe {
+        padding: 10px;
+    }
+
+    .sobre-equipe h2 {
+        font-size: 20px;
+    }
+
+    .sobre-equipe p {
+        font-size: 13px;
+    }
+}
+
+
 footer {
     background-color:#ff3900 ;
     color: #fff;
