@@ -268,10 +268,15 @@ header {
 
 @media screen and (max-width: 768px) {
     .card {
-        flex: 0 0 calc(100% - 20px); /* Define como 100% de largura para ocupar toda a largura */
+        flex: 0 0 calc(50% - 20px); /* Define como 100% de largura para ocupar toda a largura */
     }
 }
-  
+@media screen and (max-width: 576px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Cards ocupam 100% da largura disponível */
+    }
+} 
+
 footer {
     width: 100%; /* Define a largura do rodapé como 100% */
     color: #fff; /* Define a cor do texto como branco */
