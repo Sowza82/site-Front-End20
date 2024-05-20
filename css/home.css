@@ -281,7 +281,7 @@ header {
 .card {
     background-color: #fff; /* Define a cor de fundo dos cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos cards */
-    border-radius: 8px; /* Adiciona bordas arredondadas aos cards */
+    border-radius: 10px; /* Adiciona bordas arredondadas aos cards */
     padding: 20px; /* Adiciona preenchimento interno aos cards */
     width: calc(33.33% - 40px); /* Define a largura de cada card */
     margin-bottom: 20px; /* Adiciona margem inferior aos cards */
@@ -331,7 +331,7 @@ header {
 
 /* Estilos específicos para telas menores */
 @media (max-width: 768px) {
-    .container {
+    .container-cards {
         padding: 0 15px; /* Reduz o preenchimento lateral do contêiner para telas menores */
     }
     .card {
@@ -340,7 +340,7 @@ header {
 }
 
 @media (max-width: 576px) {
-    .container {
+    .container-cards {
         padding: 0 10px; /* Reduz ainda mais o preenchimento lateral do contêiner para telas menores */
     }
     .card {
