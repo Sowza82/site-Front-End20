@@ -155,7 +155,7 @@ header {
 
 /* Definições de estilo para a seção de controle, que envolve os itens da loja */
 .controle {
-    margin-top: 40px;  /* Margem superior de 40 pixels */
+    margin-top: 80px;  /* Margem superior de 40 pixels */
     margin-bottom: 40px;  /* Margem inferior de 40 pixels */
     margin-left: 40px;  /* Margem esquerda de 40 pixels */
     margin-right: 40px;  /* Margem direita de 40 pixels */
@@ -174,7 +174,7 @@ header {
 .product {
     background-color: #f9f9f9;  /* Cor de fundo do produto */
     border: 1px solid #ddd;  /* Borda do produto */
-    border-radius: 5px;  /* Borda arredondada do produto */
+    border-radius: 10px;  /* Borda arredondada do produto */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra do produto */
     margin: 10px;  /* Margem ao redor do produto */
     padding: 20px;  /* Preenchimento interno do produto */
@@ -210,13 +210,14 @@ header {
 
 /* Estilo para todos os botões */
 button {
-    background-color: #ff3900;  /* Cor de fundo do botão */
-    border: none;  /* Nenhuma borda ao redor do botão */
-    border-radius: 3px;  /* Borda arredondada do botão */
-    color: #fff;  /* Cor do texto do botão */
-    cursor: pointer;  /* Cursor do mouse ao pairar sobre o botão */
-    font-size: 16px;  /* Tamanho da fonte do botão */
-    padding: 8px 15px;  /* Preenchimento interno do botão */
+    background-color: #ff3900; /* Define a cor de fundo como laranja */
+    color: #fff; /* Define a cor do texto como branco */
+    padding: 10px 20px; /* Adiciona preenchimento de 10px na vertical e 20px na horizontal */
+    border: none; /* Remove a borda */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    font-size: 14px; /* Define o tamanho da fonte como 14px */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    margin-top: 10px; /* Adiciona margem superior de 10px */
     transition: background-color 0.3s ease;  /* Transição suave da cor de fundo do botão */
 }
 
@@ -225,17 +226,36 @@ button:hover {
     background-color: #ff9100;  /* Cor de fundo do botão ao passar o mouse sobre ele */
 }
 
-/* Estilos para tablets (até 768px) */
-@media (max-width: 768px) {
+
+
+/* Estilos para desktops (a partir de 992px) */
+@media ( min-width: 992px) {
+    .product {
+        width: calc(25% - 20px);  /* Largura dos produtos, ocupando 25% do espaço disponível */
+    }
+}
+
+/* Estilos para tablets (até 991px) */
+@media (max-width: 991px) {
     .product {
         width: calc(50% - 20px);  /* Largura dos produtos, ocupando 50% do espaço disponível */
+    }
+
+    .controle {
+        margin: 20px; /* Reduz a margem em tablets */
+        padding: 20px; /* Reduz o padding em tablets */
     }
 }
 
 /* Estilos para dispositivos móveis (até 576px) */
 @media (max-width: 576px) {
     .product {
-        width: calc(100% - 20px);  /* Largura dos produtos, ocupando 100% do espaço disponível */
+        width: calc(100% - 20px); /* Largura dos produtos, ocupando 100% do espaço disponível */
+    }
+
+    .controle {
+        margin: 10px; /* Reduz a margem em dispositivos móveis */
+        padding: 10px; /* Reduz o padding em dispositivos móveis */
     }
 }
 

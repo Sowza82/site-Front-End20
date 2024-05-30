@@ -18,7 +18,7 @@
   - google sites
   - HTML
   - CSS
-  - JavascripS
+  - Javascrips
   - VSCODE
   - GIT
   - GITHUB

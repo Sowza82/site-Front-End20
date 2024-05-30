@@ -170,21 +170,24 @@ header {
 
 /* Estilo para os cards de receitas */
 .card {
-    flex: 0 0 calc(33.33% - 20px);  /* Define o tamanho fixo para os cards de receitas */
-    background-color: #f0f0f0; /* Define a cor de fundo como cinza claro */
-    border: 1px solid #ccc; /* Adiciona uma borda de 1px sólida cinza */
-    padding: 20px; /* Adiciona preenchimento de 20px */
-    box-sizing: border-box; /* Garante que o preenchimento e a borda não afetem o tamanho total do elemento */
-    text-align: center; /* Alinha o texto ao centro */
-    margin-bottom: 20px; /* Adiciona margem inferior de 20px */
+    background-color: #f9f9f9;  /* Cor de fundo do produto */
+    border: 1px solid #ddd;  /* Borda do produto */
+    border-radius: 10px;  /* Borda arredondada do produto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Sombra do produto */
+    margin: 10px;  /* Margem ao redor do produto */
+    padding: 20px;  /* Preenchimento interno do produto */
+    text-align: center;  /* Alinhamento do texto dentro do produto */
+    width: calc(33.33% - 20px);  /* Largura do produto, com base em 33.33% do espaço disponível menos 20 pixels de margem */
 }
 
 /* Estilos para as imagens dentro dos cards */
 .card img {
     display: block; /* Define a imagem como um elemento de bloco */
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
     max-width: 100%; /* Define a largura máxima como 100% */
-    width: 300px; /* Define a largura fixa como 300px */
-    height: 300px; /* Define a altura fixa como 300px */
+    width: 300px; /* Define a largura */
+    height: 300px; /* Define a altura */
     margin:0 auto; /* Centraliza a imagem horizontalmente */
     padding: 10px; /* Adiciona preenchimento de 10px */
 }
@@ -268,10 +271,22 @@ header {
 
 @media screen and (max-width: 768px) {
     .card {
-        flex: 0 0 calc(100% - 20px); /* Define como 100% de largura para ocupar toda a largura */
+        flex: 0 0 calc(50% - 20px); /* Define como 100% de largura para ocupar toda a largura */
     }
 }
-  
+@media screen and (max-width: 576px) {
+    .card {
+        flex: 0 0 calc(100% - 20px); /* Cards ocupam 100% da largura disponível */
+    }
+} 
+
+@media screen and (max-width: 576px) {
+    .card img {
+        width: 100%; /* Defina a largura como 100% para ocupar toda a largura do card */
+        height: auto; /* Deixe a altura ajustar automaticamente */
+    }
+}
+
 footer {
     width: 100%; /* Define a largura do rodapé como 100% */
     color: #fff; /* Define a cor do texto como branco */
