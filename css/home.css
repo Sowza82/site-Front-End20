@@ -151,6 +151,12 @@ header {
         display: none; /* Esconde o ícone do menu hamburguer em telas maiores que 992px */
     }
 }
+/* Estilos para o contêiner do carrossel */
+.carousel-container {
+    max-width: 100%; /* Utiliza a largura máxima disponível */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
+    padding-top: 6rem; /* ajusta o carrosel de modo que o posicionamento das imagens se iniciam logo abaixo do header*/
+}
 
 /* Estilo para o carrossel de largura total */
 .carousel {
@@ -236,9 +242,10 @@ header {
         overflow-x: hidden; /* Esconde a rolagem horizontal */
         scroll-snap-type: y mandatory; /* Define o comportamento de rolagem para a direção vertical */
     }
-}
 
-@media (max-width: 768px) {
+    .carousel .carousel-slide {
+        scroll-snap-align: start; /* Define como o carrossel deve "parar" durante a rolagem vertical */
+    }
     .carousel-text {
         position: relative; /* Altera para posição relativa para o texto ficar no fluxo do documento */
         top: auto;
@@ -276,7 +283,7 @@ header {
 .card {
     background-color: #fff; /* Define a cor de fundo dos cards */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra aos cards */
-    border-radius: 10px; /* Adiciona bordas arredondadas aos cards */
+    border-radius: 8px; /* Adiciona bordas arredondadas aos cards */
     padding: 20px; /* Adiciona preenchimento interno aos cards */
     width: calc(33.33% - 40px); /* Define a largura de cada card */
     margin-bottom: 20px; /* Adiciona margem inferior aos cards */
@@ -326,7 +333,7 @@ header {
 
 /* Estilos específicos para telas menores */
 @media (max-width: 768px) {
-    .container-cards {
+    .container {
         padding: 0 15px; /* Reduz o preenchimento lateral do contêiner para telas menores */
     }
     .card {
@@ -335,7 +342,7 @@ header {
 }
 
 @media (max-width: 576px) {
-    .container-cards {
+    .container {
         padding: 0 10px; /* Reduz ainda mais o preenchimento lateral do contêiner para telas menores */
     }
     .card {
@@ -629,6 +636,3 @@ footer {
 #btnTopo::before {
     content: '\25B2'; /* Seta para cima */
 }
-
-
-
