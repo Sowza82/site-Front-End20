@@ -15,7 +15,7 @@ body {
     min-height: 100vh; /* Altura mínima da tela visível */
     display: flex; /* Usa o modelo de layout flexível */
     flex-direction: column; /* Organiza os elementos em coluna */
-    background-image: url("/img/cadastro/fundcadst.jpg"); /* imagem de fundo */
+    background-image: url("../img/cadastro/fundcadst.jpg"); /* imagem de fundo */
     background-repeat: no-repeat; /* para evitar repetição */
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center ; /* para centralizar a imagem */
@@ -51,11 +51,13 @@ header {
  }
 
  .logo h2 {
-    font-size:24px;     /* Define o tamanho da fonte como 24 pixels*/
-    font-weight: bold;   /* Define a fonte como negrito*/
-    color: #ffffff;      /* Define a cor do texto como branco*/
- }
-
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0; /* Remove margens padrão */
+    display: flex; /* Ativa flexbox para alinhamento */
+    align-items: center; /* Centraliza verticalmente */
+}
  
  /* Define estilos para o menu de navegação */
  .nav-menu {
