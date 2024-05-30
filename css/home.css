@@ -30,7 +30,7 @@ header {
 
 /* Define estilos para o contêiner da barra de navegação */
 .container-navbar {
-   justify-content: space-between;
+    justify-content: space-between;
     display: flex; /* Usa flexbox para organizar os elementos filho */
     align-items: center; /* Alinha os itens verticalmente ao centro */
 }
@@ -151,22 +151,27 @@ header {
         display: none; /* Esconde o ícone do menu hamburguer em telas maiores que 992px */
     }
 }
+/* Estilos para o contêiner do carrossel */
+.carousel-container {
+    max-width: 100%; /* Utiliza a largura máxima disponível */
+    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
+    padding-top: 6rem; /* ajusta o carrosel de modo que o posicionamento das imagens se iniciam logo abaixo do header*/
+}
 
 /* Estilo para o carrossel de largura total */
 .carousel {
     position: relative; /* Define a posição relativa para o carrossel */
     width: 100%; /* Define a largura do carrossel como 100% da largura do contêiner pai */
-    margin: 20px auto; /* Define uma margem superior e inferior de 20px e margem lateral automática para centralizar */
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do carrossel */
-    height: auto; /* Altura automática para se ajustar ao conteúdo do carrossel */
+    margin: 0; /* Define uma margem superior e inferior de 20px e margem lateral automática para centralizar */
     padding: 0;  /* Remove o preenchimento interno */
+    overflow: hidden;
 }
 
 /* Contêiner dos slides do carrossel */
 .carousel .carousel-container {
-    width: 100vw; /* Define a largura do contêiner de slides como 100% da largura da viewport */
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner de slides */
-    display: flex; /* Usa flexbox para organizar os slides */
+    display: flex;
+    overflow-x: auto; /* Permite rolar os slides horizontalmente em dispositivos menores */
+    scroll-snap-type: x mandatory; /* Define o comportamento de rolagem do carrossel */
 }
 
 /* Estilo dos slides individuais do carrossel */
@@ -191,7 +196,7 @@ header {
     position: absolute; /* Define a posição absoluta para o texto dentro dos slides */
     top: 50%; /* Alinha o texto verticalmente ao centro */
     left: 50%; /* Alinha o texto horizontalmente ao centro */
-    width: 90%; /* Define a largura do texto como 90% do seu contêiner */
+    width: 50%; /* Define a largura do texto como 50% do seu contêiner */
     max-width: 800px; /* Define a largura máxima do texto */
     transform: translate(-50%, -50%); /* Move o texto para o centro do slide */
     background-color: rgba(0, 0, 0, 0.5); /* Define uma cor de fundo semitransparente para o texto */
@@ -232,14 +237,23 @@ header {
 
 /* Estilos específicos para telas menores */
 @media screen and (max-width: 768px) {
-    .carousel {
-        max-width: 90%; /* Reduz a largura máxima do carrossel para telas menores */
+    .carousel .carousel-container {
+        flex-direction: column; /* Altera a direção do flexbox para empilhar os slides verticalmente */
+        overflow-x: hidden; /* Esconde a rolagem horizontal */
+        scroll-snap-type: y mandatory; /* Define o comportamento de rolagem para a direção vertical */
     }
-}
 
-@media (max-width: 768px) {
+    .carousel .carousel-slide {
+        scroll-snap-align: start; /* Define como o carrossel deve "parar" durante a rolagem vertical */
+    }
     .carousel-text {
-        bottom: 0; /* Reposiciona o texto na parte inferior para telas menores */
+        position: relative; /* Altera para posição relativa para o texto ficar no fluxo do documento */
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%; /* Define a largura do texto como 100% para ocupar todo o espaço disponível */
+        max-width: none; /* Remove a largura máxima para permitir que o texto ocupe toda a largura */
+        text-align: center; /* Centraliza o texto */
     }
 }
 
