@@ -15,7 +15,7 @@ body {
     min-height: 100vh; /* Altura mínima da tela visível */
     display: flex; /* Usa o modelo de layout flexível */
     flex-direction: column; /* Organiza os elementos em coluna */
-    background-image: url("/img/cadastro/fundcadst.jpg"); /* imagem de fundo */
+    background-image: url("../img/cadastro/fundcadst.jpg"); /* imagem de fundo */
     background-repeat: no-repeat; /* para evitar repetição */
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center ; /* para centralizar a imagem */

@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("/img/login/fundlog.jpg"); /* imagem de fundo */
+    background-image: url("../img/login/fundlog.jpg"); /* imagem de fundo */
     background-repeat: no-repeat; /* para evitar repetição */
     background-size: cover; /* para cobrir todo o corpo */
     background-position: center ; /* para centralizar a imagem */
@@ -130,15 +130,16 @@ header {
     }
 }
 
+/* Estilos para o ícone do menu hamburguer */
 .hamburger {
-    display: flex; /* Exibe o botão */
-    justify-content: space-between; /* Distribui o espaço entre os itens */
-    cursor: pointer; /* Muda o cursor para um ponteiro ao passar por cima */
-    padding: 10px; /* Adiciona preenchimento interno ao botão */
+    display: flex; /* Usa flexbox para organizar os elementos filho */
+    justify-content: space-between; /* Distribui os elementos igualmente ao longo do eixo principal */
+    cursor: pointer; /* Define o cursor como ponteiro */
+    padding: 10px; /* Adiciona preenchimento de 10px */
     background: none; /* Remove o fundo */
     border: none; /* Remove a borda */
-    font-size: 20px; /* Define o tamanho da fonte */
-    order: 2; /* Reordena o elemento na flexbox */
+    font-size: 20px; /* Define o tamanho da fonte como 20px */
+    order: 2; /* Define a ordem de exibição */
 }
 
 .hamburger:hover {
